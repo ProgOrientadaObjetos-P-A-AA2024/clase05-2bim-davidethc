@@ -10,8 +10,14 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Persona persona1 = new Persona("René", 39);
-        Persona persona2 = new Persona("Santiango", 20);
+           Ciudad ciu1 = new Ciudad();
+        Ciudad ciu2 = new Ciudad();
+        ciu1.establecerNonbre("Loja");
+        ciu2.establecerNonbre("Ambato");
+        Persona persona1 = new Persona("René", 39,ciu1);
+        Persona persona2 = new Persona("Santiango", 20,ciu2);
+        
+     
         
         OperacionesEstudiantes op1 = new OperacionesEstudiantes();
         ArrayList<Persona> miLista = new ArrayList<>();
@@ -19,7 +25,11 @@ public class Principal {
         miLista.add(persona2);
         op1.establecerEstudiante(miLista);
         op1.establecerPromedioEdades();
+        op1.establecerEdadMaxima();
+        op1.establecerEdadMinima();
+        op1.establecerListaCiudadesEstudiantes();
         
-        System.out.printf("%.2f\n", op1.obtenerPromedioEdades());
+        System.out.printf("%s\n", op1);
+        //se llama al tostring 
     }
 }

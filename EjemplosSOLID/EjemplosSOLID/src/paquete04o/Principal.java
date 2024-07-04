@@ -11,6 +11,14 @@ import java.util.ArrayList;
  */
 public class Principal {
     public static void main(String[] args) {
+        TransporteMaritimo submarino = new TransporteMaritimo();
+        submarino.establecerMaritimo("BarcoMonky");
+        submarino.establecerTarifa();
+        
+        TransporteAereo avion = new  TransporteAereo();
+        avion.establecerAvion("Avionaso");
+        avion.establecerTarifa();
+     
         TransporteBus bus = new TransporteBus();
         bus.establecerCooperativaBus("24 Mayo");
         bus.establecerTarifa();
@@ -29,6 +37,8 @@ public class Principal {
         lista.add(bus);
         lista.add(taxi);
         lista.add(t1);
+        lista.add(submarino);
+        lista.add(avion);
         tipos.establecerTransportes(lista);
         tipos.establecerPromedioTarifas();
         
