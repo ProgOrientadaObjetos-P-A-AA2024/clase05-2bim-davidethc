@@ -9,12 +9,16 @@ package paquete06l;
  * @author monkyd
  */
 public class TarjetaCredito {
-    String nombre;
-    int numero;
-
-    public TarjetaCredito(String nombre1, int numero1) {
+   private String nombre;
+   private  int numero;
+   private  Banco banco;
+   
+    
+    
+    public TarjetaCredito(String nombre1, int numero1,Banco bannom) {
         nombre = nombre1;
         numero = numero1;
+        banco = bannom;
     }
 public TarjetaCredito(){
     
@@ -25,6 +29,11 @@ public TarjetaCredito(){
 
     public void establecerNumero(int numero) {
         this.numero = numero;
+    
+    }
+      public void establecerBanco(Banco ban) {
+        banco = ban;
+    
     }
 
     public String obtenerNombre() {
@@ -34,6 +43,11 @@ public TarjetaCredito(){
     public int obtenerNumero() {
         return numero;
     }
+
+    public Banco obtenerBanco() {
+        return banco;
+    }
+    
     
     
     
