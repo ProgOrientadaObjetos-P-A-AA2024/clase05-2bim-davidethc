@@ -31,7 +31,7 @@ public class EvaluacionEnsayo implements EvaluacionTipoDos {
     public double obtenerTotalProblemas() {
         return totalProblemas;
     }
-    
+    //SE TRABAJA CON LOS METODOS YA Q ESTAMOS EN LA OBLIGACION DE OCUPARLOS POR IMPLEMENTS 
     
     @Override
     public void establecerPromedioEnsayo() {
@@ -45,5 +45,7 @@ public class EvaluacionEnsayo implements EvaluacionTipoDos {
         return promedioEnsayo;
 
     }
+    
+    //7
     
 }
